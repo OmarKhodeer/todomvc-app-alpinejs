@@ -26,8 +26,9 @@ window.todoApp = () => {
 
 		addTodo() {
 			if (this.newTodo.trim() !== "") {
+				const id = Date.now() + Math.floor(Math.random() * 1000000);
 				this.todos.push({
-					id: Date.now(),
+					id: id,
 					body: this.newTodo,
 					completed: false,
 				});
